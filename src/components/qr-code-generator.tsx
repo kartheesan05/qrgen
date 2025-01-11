@@ -9,7 +9,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Download } from "lucide-react"
 
 export default function QRCodeGenerator() {
-  const [text, setText] = useState("https://qrgen.kartheesan.online")
+  const [text, setText] = useState("")
   const [size, setSize] = useState(512)
 
   const downloadQRCode = () => {
@@ -34,7 +34,7 @@ export default function QRCodeGenerator() {
       downloadLink.click()
     }
 
-    img.src = "'data:image/svg+xml;base64,'" + btoa(svgData)
+    img.src = "data:image/svg+xml;base64," + btoa(svgData)
   }
 
   return (
@@ -75,7 +75,7 @@ export default function QRCodeGenerator() {
           <div className="flex justify-center bg-white p-4 rounded-lg">
             <QRCodeSVG
               id="qr-code"
-              value={text || "'"}
+              value={text || ""}
               size={size}
               level="H"
               includeMargin
