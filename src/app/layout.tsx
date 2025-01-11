@@ -16,7 +16,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/icon.png" sizes="any" />
       </head>
-      <body>
+      <body className="bg-gray-50">
         {children}
       </body>
     </html>
